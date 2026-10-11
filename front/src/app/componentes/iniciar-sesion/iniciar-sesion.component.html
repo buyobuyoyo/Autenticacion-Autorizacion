@@ -1,0 +1,11 @@
+<main class="fondo">
+    <form class="tarjeta" (submit)="iniciarSesion($event, correo.value, password.value)">
+        <h2 class="titulo">Iniciar sesión</h2>
+        <input #correo type="email" placeholder="Correo" required>
+        <input #password type="password" placeholder="Contraseña" required>
+        @if (mensajeError()) {
+            <p class="error">{{ mensajeError() }}</p>
+        }
+        <button type="submit">Iniciar sesión</button>
+    </form>
+</main>
